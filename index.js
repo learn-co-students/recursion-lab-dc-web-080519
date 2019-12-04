@@ -11,12 +11,11 @@ function printString(str) {
 }
 
 function reverseString(str) {
-  console.log(str.slice(-1))
-  if (str.length > 1) {
-    const subString = str.substring(0, str.length - 1)
-    reverseString(subString)
+  if (str.length < 2) {
+    return str
   } else {
-    return true
+    const subString = str.substring(0, str.length - 1)
+    return str.slice(-1) + reverseString(subString)
   }
 }
 
