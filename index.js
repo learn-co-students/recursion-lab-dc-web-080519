@@ -19,3 +19,16 @@ function reverseString(str) {
     return true
   }
 }
+
+function isPalindrome(str) {
+  if (str[0] !== str.slice(-1)) {
+    return false
+  }
+
+  if (str.length > 1) {
+    const subString = str.substring(1, str.length - 1)
+    isPalindrome(subString)
+  }
+
+  return true
+}
